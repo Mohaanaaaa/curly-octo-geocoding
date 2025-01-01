@@ -6,14 +6,32 @@ import Geocoding from './Geocoding';
 import ReverseGeocoding from './ReverseGeocoding';
 import './App.css';
 
+// Import web-vitals for optional performance monitoring
+import { getCLS, getFID, getLCP } from 'web-vitals';
+
 function App() {
+    // Function to report metrics (optional)
+    const reportMetrics = ({ name, delta, label }) => {
+        console.log(`${name} metric: ${delta} (${label})`);
+    };
+
+    // Call web-vitals functions to log metrics
+    React.useEffect(() => {
+        getCLS(reportMetrics);
+        getFID(reportMetrics);
+        getLCP(reportMetrics);
+    }, []);
+
     return (
         <Router>
             <div className="App">
                 <nav>
                     <div className="logo">
                         <Link to="/">
-                            <img src="https://img.icons8.com/?size=100&id=Q82WjgdMEzoU&format=png&color=000000" alt="Logo" />
+                            <img
+                                src="https://img.icons8.com/?size=100&id=Q82WjgdMEzoU&format=png&color=000000"
+                                alt="Logo"
+                            />
                         </Link>
                     </div>
                     <ul>
