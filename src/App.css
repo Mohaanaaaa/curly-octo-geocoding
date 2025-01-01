@@ -1,0 +1,145 @@
+/* src/App.css */
+
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 1200px; /* Improved max width for larger screens */
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Navigation Bar Styles */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4a90e2;
+  padding: 10px 20px;
+  border-radius: 5px; /* Slightly rounded corners */
+  position: relative; /* Helps with positioning */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  z-index: 100; /* Make sure nav stays on top */
+}
+
+nav .logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600; /* Slightly bolder links */
+  padding: 10px;
+  border-radius: 3px; /* Rounded link backgrounds */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+}
+
+/* Form Styles */
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+input[type="text"],
+input[type="number"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #4a90e2; /* Blue focus outline */
+  outline: none; /* Remove default focus outline */
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #6ba4f8; /* Green button */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+  background-color: #28a745; /* Darker green on hover */
+  color: #333;
+  font-size: 16px;
+}
+
+/* Result Styles */
+.result {
+  background-color: #e7f4e4; /* Light green background */
+  border-left: 6px solid #28a745; /* Green accent left border */
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+}
+
+/* Error Message Styles */
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  nav {
+      flex-direction: column; /* Stack nav items on small screens */
+      font-family: 'Courier New', Courier, monospace;
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center; /* Centered links */
+  }
+
+  nav li {
+      margin: 5px 0; /* Adjust margin for vertical links */
+  }
+
+  .App {
+      padding: 10px; /* Less padding on small screens */
+  }
+}
