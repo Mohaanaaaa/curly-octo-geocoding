@@ -7,7 +7,7 @@ import ReverseGeocoding from './ReverseGeocoding';
 import './App.css';
 
 // Import web-vitals for optional performance monitoring
-import { getCLS, getFID, getLCP } from 'web-vitals';
+import { onCLS, onFID, onLCP } from 'web-vitals';
 
 function App() {
     // Function to report metrics (optional)
@@ -17,9 +17,9 @@ function App() {
 
     // Call web-vitals functions to log metrics
     React.useEffect(() => {
-        getCLS(reportMetrics);
-        getFID(reportMetrics);
-        getLCP(reportMetrics);
+        onCLS(reportMetrics);
+        onFID(reportMetrics);
+        onLCP(reportMetrics);
     }, []);
 
     return (

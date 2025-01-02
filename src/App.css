@@ -23,10 +23,11 @@ nav {
   justify-content: space-between;
   background-color: #4a90e2;
   padding: 10px 20px;
-  border-radius: 5px; /* Slightly rounded corners */
+  border-radius: 4px; /* Slightly rounded corners */
   position: relative; /* Helps with positioning */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   z-index: 100; /* Make sure nav stays on top */
+  
 }
 
 nav .logo img {
@@ -48,15 +49,16 @@ nav li {
 
 nav a {
   text-decoration: none;
-  color: white;
+  color: rgb(8, 8, 8);
   font-weight: 600; /* Slightly bolder links */
   padding: 10px;
-  border-radius: 3px; /* Rounded link backgrounds */
+  border-radius: 16px; /* Rounded link backgrounds */
   transition: background-color 0.3s, color 0.3s;
+  background-color: #f2e8f3;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Subtle highlight */
+  background-color: rgba(113, 226, 113, 0.74); /* Subtle highlight */
 }
 
 /* Form Styles */
@@ -76,7 +78,7 @@ input[type="number"] {
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 14px;
   font-size: 16px;
   transition: border-color 0.3s;
 }
@@ -88,12 +90,12 @@ input[type="number"]:focus {
 }
 
 button {
-  margin-top: 10px;
+  margin-top: 15px;
   padding: 10px;
   background-color: #6ba4f8; /* Green button */
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 20px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
